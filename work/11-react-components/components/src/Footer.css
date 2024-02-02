@@ -1,0 +1,42 @@
+/*Footer css*/
+footer {
+    background-color: grey;
+    padding: 20px;
+    margin-top: auto;
+}
+
+.footer__items {
+    display: flex;
+    justify-content: space-around;
+}
+
+footer a {
+    box-shadow: inset 0 0 0 0 #d7e6eba1;
+    color: #ffff;
+    text-decoration: none;
+    padding: 5px;
+    margin: 0 -4px;
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+    border-radius: 5px;
+}
+
+footer a:hover {
+    color: black;
+    box-shadow: inset 200px 0 0 0 #d7e6eba1;
+    border-radius: 5px;
+}
+
+footer a i {
+    vertical-align: baseline;
+}
+
+@media (max-width: 44rem) {
+    .footer__items {
+        flex-direction: column;
+        align-items: center;
+       }
+
+       .footer__items a {
+        margin-bottom: 2px;
+       }
+}

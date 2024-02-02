@@ -1,0 +1,39 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+#root {
+  display: contents;
+}
+
+html,
+body {
+  background-color: rgb(191, 187, 187);
+  font-family: sans-serif;
+  line-height: 1.6;
+}
+
+.dark {
+  background-color: rgb(13, 13, 13);
+  color: white;
+}
+
+.light {
+  background-color: rgb(191, 187, 187);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  padding: 15px;
+  flex: 1;
+}

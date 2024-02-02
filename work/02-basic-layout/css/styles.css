@@ -1,0 +1,71 @@
+header {
+    grid-area: header;
+}
+
+#homepage {
+    display: grid;
+    grid-template-areas: 
+    "header header"
+    "localmenu main"
+    "footer footer";
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 25% 75%;
+    background-color: pink;
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    justify-content: space-around;
+    background-color: plum;
+}
+
+.menu li {
+    display: inline-block;
+    padding: 20px;
+}
+
+.menu li:hover {
+    background-color: rebeccapurple;
+}
+
+.menu li:hover a {
+    color: #ffff;
+}
+
+main {
+    grid-area: main;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+nav.local-menu {
+    grid-area: localmenu;
+    border-right: 1px solid black;
+}
+
+nav ul {
+    padding: 0;
+    margin: 0;
+}
+
+.local-menu li {
+    list-style-type: none;
+    padding: 10px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+nav li:hover {
+    background-color: plum;
+    cursor: pointer;
+}
+
+footer {
+    grid-area: footer;
+    background-color: plum;
+    padding: 20px;
+}

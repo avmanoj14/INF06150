@@ -1,0 +1,336 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+html, body {
+    background-color: rgb(191, 187, 187);
+    font-family: sans-serif;
+    line-height: 1.6;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+#root {
+    display: contents;
+}
+
+/*Header css*/
+.header {
+    background-color: grey;
+    display: flex;
+    padding: 10px 20px 5px 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__logo {
+    margin: 10px;
+    cursor: pointer;
+    filter: grayscale(100%);
+    transition: filter 0.5s;
+}
+
+.header__logo:hover {
+    filter: grayscale(0);
+}
+
+.header__logo img {
+    vertical-align: text-top;
+}
+
+.header__menu {
+    margin-right: 120px;
+    list-style-type: none;
+}
+
+.header__menu .menu {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    padding: 0;
+    align-items: flex-start;
+}
+
+.header__menu .menu__main {
+    margin-right: 20px;
+    position: relative;
+}
+
+.header__menu .menu__main a{
+    box-shadow: inset 0 0 0 0 #d7e6eba1;
+    color: #ffff;
+    text-decoration: none;
+    padding: 5px;
+    margin: 0 -4px;
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+    border-radius: 5px;
+    position: relative;
+}
+
+.header__menu .menu__main i {
+    vertical-align:baseline ;
+}
+
+.header__menu .menu__main a:hover {
+    color: black;
+    box-shadow: inset 200px 0 0 0 #d7e6eba1;
+    border-radius: 5px;
+}
+
+.header__menu .submenu {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: max-content;
+    max-height: 0;
+    overflow: hidden;
+    display: block;
+    list-style-type: none;
+    padding: 0;
+    background-color: grey;
+    transition: max-height 1s;
+    border-radius: 5px;
+}
+
+
+.header__menu .menu__main:hover .submenu,
+.header__menu .menu__main:focus-within .submenu
+ {
+    max-height: 20rem;
+}
+
+.submenu__link {
+    box-shadow: inset 0 0 0 0 #d7e6eba1;
+    color: #ffff;
+    text-decoration: none;
+    padding: 2px;
+    margin: 0 -4px;
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+    border-radius: 5px;
+}
+
+.submenu__link:hover {
+    color: black;
+    box-shadow: inset 200px 0 0 0 #d7e6eba1;
+    border-radius: 5px;
+}
+
+.submenu .submenu__item {
+    padding: 10px;
+}
+
+.submenu .submenu__item i {
+    vertical-align: text-top;
+}
+
+
+/*Home page css*/
+main {
+    padding: 15px;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main__title {
+    text-align: center;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 10px;   
+}
+
+.card {
+    grid-column: span 4;
+    border: 1px solid black;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.63);
+    padding: 11px;
+}
+
+.card img {
+   height: 200px;
+   width: 300px;
+}
+
+.card__link {
+    display: inline-block;
+    background-color: grey;
+    border: 1px solid white;
+    text-decoration: none;
+    padding: 5px;
+    border-radius: 5px;
+    margin-top: auto;
+    color: #fff;
+    background-image: -webkit-linear-gradient(30deg, #161516 50%, transparent 50%);
+    background-image: linear-gradient(30deg, #161516 50%, transparent 50%);
+    background-size: 500px;
+    background-repeat: no-repeat;
+    background-position: 0%;
+    -webkit-transition: background 300ms ease-in-out;
+    transition: background 300ms ease-in-out;
+}
+
+.card__link:hover {
+    background-position: 100%;
+  color: #ffffff;
+}
+
+/*About Page css*/
+.content__para {
+    background-color: white;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/*Registration page css*/
+form {
+    margin: 0 auto;
+    max-width: 800px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 15px;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.63);
+    border: 1px solid black; 
+    padding: 20px;
+    border-radius: 10px;
+}
+
+
+form input {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+form input[type="checkbox"] {
+    height: 30px;
+    width: auto;
+}
+
+form select {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.register__btn {
+    grid-column: span 2;
+    text-align: center;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: black;
+    color: #ffff;
+    margin-top: 10px;
+    transition: background 0.5s;
+}
+
+.register__btn:hover {
+    color: black;
+    background-color: grey;
+}
+
+.required__label {
+    color: red;
+    display: contents;
+}
+
+.form__note {
+    font-size: 12px;
+}
+
+
+/*Footer css*/
+footer {
+    background-color: grey;
+    padding: 20px;
+    margin-top: auto;
+}
+
+footer a {
+    box-shadow: inset 0 0 0 0 #d7e6eba1;
+    color: #ffff;
+    text-decoration: none;
+    padding: 5px;
+    margin: 0 -4px;
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+    border-radius: 5px;
+}
+
+footer a:hover {
+    color: black;
+    box-shadow: inset 200px 0 0 0 #d7e6eba1;
+    border-radius: 5px;
+}
+
+@media (max-width:60rem) {
+    .header {
+        display: block;
+    }
+
+    .header__title {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .header__menu {
+        margin: 0;
+        display: flex;
+        justify-content: center;    
+    }
+
+    .card {
+        grid-column: span 12;
+       }
+
+    .header__menu .menu__main {
+        margin-right: 0;
+    }
+
+    form {
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 0;
+        max-width: 350px;
+        margin-top: 100px;
+        margin-bottom: 100px;
+    }
+
+    form input {
+        margin-bottom: 20px;
+    }
+
+    form select {
+        margin-bottom: 15px;
+    }
+
+    form input[type="checkbox"] {
+        margin-left: -90%;
+    }
+    
+
+    .register__btn {
+        grid-column: span 1;
+        margin-bottom: 11px;
+    }
+
+}

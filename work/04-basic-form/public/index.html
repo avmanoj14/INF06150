@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/653b2ae769.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <div id="root">
+        <header class="header">
+            <div class="header__logo"> 
+                <img src="https://1000logos.net/wp-content/uploads/2022/07/Northeastern-University-Logo.png" height="75px" width="auto" alt="Northeastern University Logo">
+            </div>
+
+            <h1 class="header__title">Registration Form</h1>
+
+            <nav class="header__menu">
+                <ul>
+                  <li><a href="#"><i class="fa-solid fa-house"></i> Home</a></li>
+                  <li><a href="#"><i class="fa-solid fa-bars"></i> Menu</a></li>
+                  <li><a href="#"><i class="fa-solid fa-magnifying-glass"></i> Search</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        
+
+        
+        <main>
+            <form class="registration__form" action="/submit" method="POST">
+
+                <label for="name">Name<span class="required__label">*</span></label>
+                <input type="text" id="name" name="name" placeholder="Type your name" required>
+               
+
+                <label for="email">Email<span class="required__label">*</span></label>
+                <input type="email" id="email" name="email" placeholder="Type your mail" required>
+               
+
+                <label class="test" for="annoyMe">Do you want us to send you annoying emails? </label>
+                <input type="checkbox" id="annoyMe" name="annoy_me" checked>
+               
+                
+
+                <label for="tier" class="required">Choose a Tier<span class="required__label">*</span></label>
+                <select id="tier" name="tier" required>
+                    <option value="" selected disabled>Please select</option>
+                    <option value="1">Silver Tier</option>
+                    <option value="2">Gold Tier</option>
+                    <option value="3">Platinum Tier</option>
+                </select>
+               
+
+                <button class="register__btn" type="submit">Register</button>
+
+                <p class="form__note"><span class="required__label">*</span> <i>Indiactes required fields</i></p>
+
+            </form>
+        </main>
+
+        <footer>
+            We really don't care about your privacy, see our <a href="privacy.html">Privacy Policy</a>
+        </footer>
+    
+    </div>
+    
+</body>
+</html>
